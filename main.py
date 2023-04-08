@@ -1,4 +1,4 @@
-
+import random
 from Player import Player
 from setting import *
 from Objeckt import Objeckt
@@ -22,10 +22,11 @@ score_surface = font.render('0', True, (255, 255, 255))
 
 
 def new_mobs():
-    object_botom = Objeckt(setting['w'], 700)
-    object_top = Objeckt(setting['w'], 110)
+    object_botom = Objeckt(setting['w'], random.randint(500, 900))
+    object_top = Objeckt(setting['w'], random.randint(-100, 100))
     object_group.add(object_top, object_botom)
     all_sprite.add(object_group)
+
 
 
 SPAWN_SPRITE = pg.USEREVENT + 1

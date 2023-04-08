@@ -8,7 +8,7 @@ class Player(pg.sprite.Sprite):
         self.image = player_img
         self.rect = self.image.get_rect()
         self.rect.center = (400, 400)
-        self.radios = 10
+        self.radius = 1
 
     def update(self):
         self.speedx = 0
